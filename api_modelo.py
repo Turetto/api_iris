@@ -16,7 +16,7 @@ JWT_EXP_DELTA_SECONDS = 3600
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("api_modelo")
 
-db_url = "sqlite:///predictions.db"
+db_url = "sqlite:////tmp/predictions.db"
 engine = create_engine(db_url, echo=False)
 Base = declarative_base()
 SessionLocal = sessionmaker(bind=engine)
